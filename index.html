@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wish</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="body">
+        <div ><h1 id="wishing">LIPSA!!</h1></div>
+     <div id="cards">  
+       <div class="box" onclick="box1()" ><span><b id="good-morning">Good Morning</b></span></div>
+       <div class="box" onclick="box2()"><span> <b id="good-afternoon">Good afternoon</b> </span></div>
+       <div class="box" onclick="box3()"><span><b id="good-evening">Good Evening</b></span></div>
+     </div> 
+     <div id="reset" onclick="wish()">Reset</div>
+   </div>
+
+   <script>
+       let wishing = document.getElementById('wishing');
+       function box1(){
+           document.getElementById('good-morning').style.color="#0F2C67";
+        wishing.innerText="Good Morning! Enjoy ur day";
+        wishing.style.color="#0F2C67";
+
+       }
+       function box2(){
+           document.getElementById('good-afternoon').style.color="#F90716";
+           wishing.innerText="Good Afternoon! Always Keep Smile"
+           wishing.style.color="#F90716";
+
+       }
+       function box3(){
+           document.getElementById('good-evening').style.color="#B91646";
+           wishing.innerText="Good Evening! Be Happy";
+           wishing.style.color="#B91646";
+       }
+       function wish(){
+           let greetings = document.getElementsByClassName('box');
+           for(let i=0;i<greetings.length;i++){
+               greetings[i].children[0].children[0].style.color="#160040";
+           }
+           wishing.innerText="LIPSA!!"
+           wishing.style.color="#160040";    
+       }
+   </script>
+</body>
+</html>
